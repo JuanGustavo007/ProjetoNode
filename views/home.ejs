@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tela de login</title>
+        <link rel="stylesheet" href="/css/form.css" />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row align-self-center pt-5">
+                <div class="row2 row p-0">
+                    <div class="col-5 d-flex justify-content-center flex-column align-items-center side-left">
+                        <h1>Obrigado por voltar</h1>
+                        <p>Conecte-se novamente na plataforma</p>
+                        <button type="button" class="btn btn-outline-light btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form action="/entrar" method="post">
+                                        <div class="modal-body">
+                                            <input
+                                                type="email"
+                                                id="inputEmailEntrar"
+                                                class="form-control"
+                                                placeholder="Email"
+                                                required=""
+                                                autofocus=""
+                                                name="inputEmail"
+                                            />
+                                            <input
+                                                type="password"
+                                                id="inputPasswordEntrar"
+                                                class="form-control mt-2"
+                                                placeholder="Senha"
+                                                required=""
+                                                name="inputPassword"
+                                            />
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary entrar">Entrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col side-right">
+                        <form action="/usuario" method="post" class="form-signin">
+                            <input
+                                type="email"
+                                id="inputEmail"
+                                class="form-control"
+                                placeholder="Email address"
+                                required=""
+                                autofocus=""
+                                name="email"
+                            />
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="" name="senha" />
+                            <input
+                                type="password"
+                                id="inputPasswordConfirm"
+                                class="form-control"
+                                placeholder="Confirmar senha"
+                                required=""
+                                name="confirmar"
+                            />
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="logado" />
+                                <label class="form-check-label" for="flexCheckDefault"> Manter-me logado</label>
+                            </div>
+                            <div class="d-flex justify-content-center mt-2">
+                                <button type="submit" class="btn btn-primary">Criar conta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="/JS/telaLogin.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</html>
